@@ -12,6 +12,5 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-         $products = factory(MyStock\Product::class, 3)->create();
     }
 }
