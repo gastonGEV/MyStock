@@ -3,6 +3,7 @@
 namespace MyStock\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MyStock\Product;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $products = Product::select('products.*', 'stocks.cant')
+        ->join('stocks', 'stocks.id', '=' , 'products.id')
+        ->get();
+
+        return view('fakerView', compact('products'));
     }
 }
