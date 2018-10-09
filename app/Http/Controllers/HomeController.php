@@ -24,10 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::select('products.*', 'stocks.cant')
-        ->join('stocks', 'stocks.id', '=' , 'products.id')
-        ->get();
+        // $products = Product::select('products.*', 'stocks.cant')
+        // ->join('stocks', 'stocks.id', '=' , 'products.id')
+        // ->get();
 
+        $products = Product::all();
+        
         return view('fakerView', compact('products'));
     }
 }

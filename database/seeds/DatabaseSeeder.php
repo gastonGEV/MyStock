@@ -12,6 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //$this->call(UsersTableSeeder::class);
-        factory(MyStock\Stock::class, 5)->create();
+        factory(MyStock\TypeProduct::class, 5)->create()->each(function (MyStock\TypeProduct $type) {
+
+            factory(MyStock\Product::class,5)->create([
+                'type_id' => $type->id
+            ]);
+        });
     }
 }
