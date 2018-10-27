@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
                 'type_id' => $type->id
             ]);
         });
+
+        factory(MyStock\Combo::class, 2)->create();
     }
 }
