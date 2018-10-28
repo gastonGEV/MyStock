@@ -15,3 +15,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/index', 'HomeController@index')->name('home');
+
+
+Route::get('/combo', 'ComboController@index');
+Route::post('/combo/show', 'ComboController@show');

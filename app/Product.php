@@ -15,4 +15,9 @@ class Product extends Model
     public function type() {
         return $this->belongsTo('MyStock\TypeProduct');
     }
+
+    public function combos() {
+        return $this->belongsToMany('MyStock\Combo')->withPivot('cant_product');
+    }
+
 }
