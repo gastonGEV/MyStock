@@ -19,7 +19,7 @@ $.ajax({
     $.each(data.data, function (key, val) {
       $('.inner').prepend(`<tr>
                           <th scope="row">${val.id}</th>
-                          <td>${val.barcode}</td>
+                          <td>${val.barCode}</td>
                           <td>${val.type_id}</td>
                           <td>${val.name}</td>
                           <td>${val.cantMin}</td>
@@ -37,7 +37,7 @@ $("#chatBox").scrollTop($("#chatBox")[0].scrollHeight);
 
 // Assign scroll function to chatBox DIV
 $('#chatBox').scroll(function () {
-  console.log($('#chatBox').scrollTop());
+  //console.log($('#chatBox').scrollTop());
   if ($('#chatBox').scrollTop() == 0) {
     // Display AJAX loader animation
     $('#loader').show();
@@ -58,7 +58,7 @@ $('#chatBox').scroll(function () {
         $.each(data.data, function (key, val) {
           $('.inner').prepend(`<tr>
                           <th scope="row">${val.id}</th>
-                          <td>${val.barcode}</td>
+                          <td>${val.barCode}</td>
                           <td>${val.type_id}</td>
                           <td>${val.name}</td>
                           <td>${val.cantMin}</td>
