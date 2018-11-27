@@ -28,7 +28,8 @@ class HomeController extends Controller
         // ->join('stocks', 'stocks.id', '=' , 'products.id')
         // ->get();
 
-        $products = Product::all();
+        $products = Product::take(10)->get();
+        //dd($products);
         
         return view('fakerView', compact('products'));
     }

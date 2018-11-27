@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(UsersTableSeeder::class);
         factory(MyStock\TypeProduct::class, 5)->create()->each(function (MyStock\TypeProduct $type) {
 
-            factory(MyStock\Product::class,5)->create([
+            factory(MyStock\Product::class,100)->create([
                 'type_id' => $type->id
             ]);
         });

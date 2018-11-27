@@ -15,3 +15,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/index', 'HomeController@index')->name('home');
+Route::get('/list/{id}', 'ChatController@index');
