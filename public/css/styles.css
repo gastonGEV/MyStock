@@ -1,23 +1,28 @@
-#chatBox {
+.table {
+  /*el +2*/
+  border: 1px solid; 
+}
+
+#bodyTable {
+  display: block;
   width: 100%;
-  height: 525px;
-  border: 1px solid;
-  overflow-y: scroll;
+  height: 450px;
+  overflow-y: auto;
+}
+
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead{
+  width: calc( 100% - 1em ); /* scrollbar is average 1em/16px width, remove it from thead width */
 }
 
 .loader {
   width: 100%;
   text-align: center;  
 }
-
-#loader {
-  display: none;
-}
-
-/* .messages {
-  min-height: 40px;
-  border-bottom: 1px solid #1f1f1f;
-} */
 
 .date {
   font-size: 9px;

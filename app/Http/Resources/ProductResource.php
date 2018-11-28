@@ -4,10 +4,10 @@ namespace MyStock\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Chat extends JsonResource
+class ProductResource extends JsonResource
 {
     /**
-     * Transform the resource into an array.
+     * Transform the resource collection into an array.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return array
