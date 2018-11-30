@@ -38,9 +38,9 @@ const setRows = async (id) => {
 }
 
 const scrolled = async() => {
-  // console.log('scrollTop:', bodyTable.scrollTop);
-  // console.log('bodyTable scrollHeight:', bodyTable.scrollHeight - bodyTable.offsetHeight);
-  
+  //console.log('scrollTop:', bodyTable.scrollTop);
+  //console.log('bodyTable scrollHeight:', bodyTable.scrollHeight - bodyTable.offsetHeight);
+
   if (bodyTable.scrollTop == 0) {
     btnUp.style.display = 'none';
   } else {
@@ -55,7 +55,7 @@ const scrolled = async() => {
 
 
 const upScroll = () => {
-  bodyTable.scrollTo({ top: 1, behavior: 'smooth', } );
+  bodyTable.scrollTo( { top: 0, behavior: 'smooth', } );
 }
 
 //init Table 10 rows
