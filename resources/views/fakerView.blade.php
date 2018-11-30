@@ -17,9 +17,23 @@
         </thead>
         <tbody id="bodyTable" onscroll="scrolled()"></tbody>
     </table>
+    <div class="div-btn">
+        <button class="btn-up" type="button" onclick="upScroll()" title="up to first element">
+            <span class="">up</span>
+        </button>
+    </div>
+    
     <!--Loading ANIMATION-->
-    <div class="loader">
-        <img id="loader" src='http://opengraphicdesign.com/wp-content/uploads/2009/01/loader64.gif'>
+    <div hidden id="loader">
+        <div id="circle">
+        <div class="loader">
+        <div class="loader">
+            <div class="loader">
+                <div class="loader"></div>
+            </div>
+            </div>
+            </div>
+        </div> 
     </div>
     <!--END Loading ANIMATION-->
 @endsection
